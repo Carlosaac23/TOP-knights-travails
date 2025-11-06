@@ -1,1 +1,3 @@
-console.log('Hey');
+import knightsMoves from './knights';
+
+knightsMoves();
