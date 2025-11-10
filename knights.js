@@ -15,6 +15,24 @@ export default function knightsMoves(start, end) {
     [-1, -2],
   ];
 
+  const startX = start[0];
+  const startY = start[1];
+  const endX = end[0];
+  const endY = end[1];
+
+  if (
+    startX > 7 ||
+    startX < 0 ||
+    startY > 7 ||
+    startY < 0 ||
+    endX > 7 ||
+    endX < 0 ||
+    endY > 7 ||
+    endY < 0
+  ) {
+    throw new Error('Positions must be between 0 and 7 inclusive.');
+  }
+
   while (queue.length > 0) {
     const currentPosition = queue[0].position;
     const currentPath = queue[0].path;
